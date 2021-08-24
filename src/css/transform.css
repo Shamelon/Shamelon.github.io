@@ -1,0 +1,22 @@
+p{
+    width: 35%;
+    height: 30%;
+    background: #9bc;
+    float: left;
+    text-align: center
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #0f0;
+    margin: 5% auto auto 5%;
+    flex-direction: row;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.26,1.42,.78,-0.59);
+    
+}
+
+.box:active{
+    margin-left: 300px;
+    margin-top: 200px;

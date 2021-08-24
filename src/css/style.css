@@ -2,10 +2,26 @@ body{
     font-family: Arial, sans-serif;
 }
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+main{
+    width: 100%;
+    height: 100%
+}
+
 nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
+    z-index: 1000;
 }
 
 .logo{
@@ -14,6 +30,12 @@ nav{
     line-height: 60px;
     padding-left: 388px;
     float: left;
+}
+
+.logo{
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
 }
 
 .menu{
@@ -26,21 +48,34 @@ nav{
     line-height: 60px;
     margin-right: 40px;
     color: #fff;
+    opacity: 0;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.5s ease forwards;
+    -o-animation: topshift 0.5s ease forwards;
+    animation: topshift 0.5s ease forwards;
 }
 
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png) no-repeat 95% 100%/auto 85%, url("../img/%D1%84%D0%BE%D0%BD.jpg") center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 .titlecontainer{
     float: left;
     margin: 372px 0px 0px 404px;
     color: #2c384a;
-    text-align: center
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+    z-index: -1
 }
 
 .titlecontainer h1{
@@ -63,7 +98,7 @@ nav{
     background: none;
     border-radius: 5px;
     color: #6d7682;
-    font-size: 13px;
+    font-size: 14px;
     margin: 58px 14px 0px 14px;
     padding: 12px 14px 13px 15px;
 }
@@ -78,8 +113,10 @@ h2{
 }
 
 .titlelines{
-    display: block;
     margin: 30px auto 0px auto;
+    width: 72px;
+    height: 4px;
+    background: #d17700
 }
 
 #fotka2{
@@ -102,7 +139,11 @@ h2{
     border-radius: 5px;
     color: #6d7682;
     font-size: 13px;
-    background: url(../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0.png) no-repeat 5% 50%/auto 40%;
+    background-image: url(../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0.png);
+    background-repeat: no-repeat; 
+    background-position: 5% 50%;
+    background-size: 12%;
+    background-color: #fff;
     padding: 12px 12px 12px 24px;
     display: block;
     margin: 37px auto 0px auto;
@@ -115,12 +156,13 @@ h2{
     background: url(../img/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D1%84%D0%BE%D0%BD%D0%B0.jpg);
     padding-left: 20%;
     padding-right: 20%;
+    background-attachment: fixed;
     
 }
 
-.WhatICan div{
+.skill{
     float: left;
-    width: 20%;
+    width: 21%;
     margin-top: 100px;
     margin-left: 2%;
     margin-right: 2%;
@@ -128,7 +170,7 @@ h2{
     
 }
 
-.WhatICan div img{
+.skill img{
     display: block;
     margin: 0px auto 0px auto;
     height: 50px;
@@ -267,9 +309,10 @@ z-index: 98;
     height: 50%;
     padding-left: 10%;
     padding-right: 10%;
+    background-attachment: fixed;
 }
 
-.SomeStatistics div{
+.stat{
     float: left;
     margin: 88px 8% 0px 8%;
     
@@ -370,12 +413,15 @@ z-index: 98;
     padding-bottom: 42px;
 }
 
+.communicate{
+    background-color: rgba(209, 213, 219, 0.86)
+}
+
 #text_input{
     float: left;
     width: 48%;
     height: 40px;
     margin-right: 2%;
-    background-color: rgba(209, 213, 219, 0.86)
 }
 
 #email{
@@ -383,14 +429,12 @@ z-index: 98;
     width: 48%;
     height: 40px;
     margin-left: 2%;
-    background-color: rgba(209, 213, 219, 0.86)
 }
 
 #message{
     width: 100%;
     height: 96px;
     margin-top: 18px;
-    background-color: rgba(209, 213, 219, 0.86);
     font-size: 16px;
     color: rgb(93, 93, 94);
     text-align: left;
@@ -405,7 +449,7 @@ z-index: 98;
     text-align: left;
     padding-left: 13px;
     line-height: 1.5;
-    padding-top: 3px;
+    padding-top: 3px;;
 }
 
 #send{
@@ -440,4 +484,152 @@ footer div{
     color: #fff;
     text-align: center;
     font-size: 16px;
+}
+
+/*Анимации*/
+
+.menu li a{
+    transform: scale(1);
+    transition-duration: 0.1s;
+}
+
+.menu li a:visited{
+    color: #fff;
+}
+
+.menu li a{
+    color: #fff;
+    display: inline-block;
+}
+
+.menu li a:hover{
+    color: #eb8704;
+}
+
+.menu li a:active{
+    transform: scale(1.1);
+}
+
+.gray_button{
+    transition-duration:  0.2s;
+    transition-property: background-color, color;
+    transform: scale(1);
+}
+
+.gray_button:hover{
+    background-color: #344051;
+    color: #fff;
+}
+
+.gray_button:active{
+    
+    transform: scale(1.1);
+}
+
+@keyframes comming{
+    from{
+        opacity: 0
+    }
+    
+    to{
+        opacity: 1
+    }
+}
+
+@keyframes topshift{
+    
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes titlemove{
+    
+    from{
+        opacity: 0;
+        margin-left: -500px
+    }
+    
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+#somedomain{
+    transition-duration: 0.1s;
+    transition-property: background-color, color;
+    transform: scale(1);
+}
+
+#somedomain:visited{
+    color: darkviolet;
+}
+
+#somedomain:hover{
+    background-color: #ddd;
+    color: #eb8704;
+}
+
+#somedomain:active{
+    transform: scale(1.1)
+}
+
+.cases input{
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    transform: scale(1);
+}
+
+.cases input:hover{
+    background-color: #559f99;
+}
+
+.cases input:active{
+    transform: scale(0.95);
+}
+
+.CostCalculation select{
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.CostCalculation select:hover{
+    background-color: #ddd;
+}
+
+.communicate{
+    transition-property: background-color;
+    transition-duration: 0.05s;
+}
+
+.communicate:active{
+    background-color: rgba(190, 190, 190, 0.86);
 }
