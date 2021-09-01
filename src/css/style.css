@@ -36,8 +36,8 @@ nav{
     color: #fff;
     font-size: 28px;
     line-height: 60px;
-    padding-left: 388px;
     float: left;
+    text-align: center;
 }
 
 .logo{
@@ -46,15 +46,13 @@ nav{
     animation: comming 2s ease;
 }
 
-.menu{
-    float: left;
-    padding-left: 430px;
+.menu ul{
+    display: flex;
+    justify-content: space-around;
 }
 
 .menu li{
-    float: left;
     line-height: 60px;
-    margin-right: 40px;
     color: #fff;
     opacity: 0;
     font-size: 16px;
@@ -73,17 +71,16 @@ nav{
 
 .titlecontainer{
     float: left;
-    margin: 372px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
     opacity: 0;
-    -webkit-animation: titlemove 1s ease forwards;
-    -o-animation: titlemove 1s ease forwards;
-    animation: titlemove 1s ease forwards;
+    width: 100%;
+    -webkit-animation: titlemove 0.6s ease forwards;
+    -o-animation: titlemove 0.6s ease forwards;
+    animation: titlemove 0.6s ease forwards;
     -webkit-animation-delay: 2.4s;
     -o-animation-delay: 2.4s;
     animation-delay: 2.4s;
-    z-index: -1
 }
 
 .titlecontainer h1{
@@ -93,7 +90,6 @@ nav{
 }
 
 .titlecontainer h4{
-    margin-top: 40px;
     font-size: 20px;
     font-weight: bold;
     color: #79818d
@@ -107,8 +103,8 @@ nav{
     border-radius: 5px;
     color: #6d7682;
     font-size: 14px;
-    margin: 58px 14px 0px 14px;
-    padding: 12px 14px 13px 15px;
+    margin: 10px 14px 0px 14px;
+    padding: 8px 14px 13px 15px;
 }
 
 h2{
@@ -134,7 +130,7 @@ h2{
 
 .aboutme p{
     color: #717883;
-    text-align: left;
+    text-align: justify;
     margin: 24px 25% 21px 25%;
     font-size: 16px;
     font-family: Calibri;
@@ -162,18 +158,19 @@ h2{
     width: 100%;
     height: 520px;
     background: url(../img/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D1%84%D0%BE%D0%BD%D0%B0.jpg);
-    padding-left: 20%;
-    padding-right: 20%;
+    background-position: center;
     background-attachment: fixed;
     
 }
 
+.skills{
+    display: flex;
+    justify-content: space-around;
+}
+
 .skill{
-    float: left;
-    width: 21%;
+    width: 20%;
     margin-top: 100px;
-    margin-left: 2%;
-    margin-right: 2%;
     
     
 }
@@ -201,8 +198,14 @@ h2{
 
 .cases{
     height: 100%;
-    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.jpg) 0% 260px/auto;
-    
+}
+
+.cases img{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .cases p{
@@ -220,7 +223,6 @@ h2{
 
 .client{
     float: left;
-    margin: 640px 0px 0px 390px;
     width: 18%;
 }
 
@@ -241,9 +243,9 @@ h2{
 }
 
 .NameOfProject{
-    float: left;
-    width: 45%;
-    margin-top: 640px;
+    float: right;
+    width: 75%;
+    text-align: justify;
 }
 
 .NameOfProject span{
@@ -251,8 +253,7 @@ h2{
     font-family: "Calibri";
     color: rgb(63, 73, 90);
     line-height: 1.2;
-    text-align: left;
-z-index: 98;
+    z-index: 98;
 }
 
 .cases input{
@@ -266,7 +267,6 @@ z-index: 98;
 }
 
 .CostCalculation{
-    width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 95px
@@ -304,26 +304,28 @@ z-index: 98;
     width: 100%
 }
 
-.CostCalculation span{
+.itogi p{
     font-size: 21px;
+    text-align: center;
     color: rgb(28, 37, 52);
     line-height: 1.5;
+}
+
+.sroki, stoimost{
+    width: 100%;
 }
 
 .SomeStatistics{
     margin-top: 140px;
     background: url(../img/%D1%84%D0%BE%D0%BD%20%D0%BA%D0%BB%D0%B0%D0%B2%D0%B0.jpg);
+    background-position: center;
     width: 100%;
-    height: 50%;
-    padding-left: 10%;
-    padding-right: 10%;
-    background-attachment: fixed;
+    height: 499px;
 }
 
 .stat{
-    float: left;
-    margin: 88px 8% 0px 8%;
-    
+    width: 20%;
+    margin-top: 80px;
 }
 
 .yellowicons{
@@ -362,7 +364,7 @@ z-index: 98;
     font-size: 16px;
     font-family: Calibri;
     font-weight: 500;
-    width: 33%;
+    width: 100%%;
     margin-left: auto;
     margin-right: auto;     
 }
@@ -375,27 +377,23 @@ z-index: 98;
     margin-top: 158px;
     background: url(../img/%D0%A4%D0%BE%D0%BD%20%D1%81%D0%B8%D0%BD%D0%B8%D0%B9.jpg);
     height: 808px;
-    padding-left: 30%;
-    padding-right: 30%;
 }
 
 .MyContacts h2{
     color: #fff;
 }
 
-.MyContacts p{
-    font-size: 16.667px;
+#contact-text{
+    font-size: 14px;
     font-family: "Calibri";
     color: rgb(255, 255, 255);
-    line-height: 1.2;
     text-align: center;
     margin-top: 30px;
 }
 
 .contacts{
-    float: left;
-    margin: 45px 6% 0px 6%;
-    width: 21%;
+    margin-top: 45px;
+    width: 33%;
 }
 
 .contacts img{
@@ -404,20 +402,20 @@ z-index: 98;
     margin-right: auto;
 }
 
-.contacts span{
+.contacts p{
     display: block;
     font-size: 16px;
     font-family: "Calibri";
     color: rgb(255, 255, 255);
-    line-height: 1.2;
     text-align: center;
+    margin-top: 12px
 }
 
 .MyContacts h3{
     text-align: center;
     font-size: 21px;
     color: rgb(255, 255, 255);
-    padding-top: 155px;
+    padding-top: 28px;
     padding-bottom: 42px;
 }
 
@@ -508,6 +506,7 @@ footer div{
 .menu li a{
     color: #fff;
     display: inline-block;
+    text-decoration: none;
 }
 
 .menu li a:hover{
@@ -566,7 +565,7 @@ footer div{
     
     to{
         opacity: 1;
-        margin-left: 404px;
+        margin-left: 0px;
     }
 }
 
@@ -640,4 +639,64 @@ footer div{
 
 .communicate:active{
     background-color: rgba(190, 190, 190, 0.86);
+}
+
+
+
+.white-btn{
+    color: #fff;
+}
+
+.white-btn:visited{
+    color: #fff;
+}
+
+@media (max-width: 991px){
+    
+    .titlecontainer, .titlecontainer h4, .titlecontainer input{
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .titlecontainer input{
+        border: 2px solid #fff
+    }
+    
+    .main{
+        position: relative;
+    }
+    
+    .main:after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4)
+    }
+    
+    .titlecontainer{
+        -webkit-animation-delay: 0.3s;
+        -o-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+    }
+    
+    .aboutme p{
+        margin: 20px 15% 18px 15%;
+        font-size: 16px;
+    }
+    
+    .NameOfProject{
+        width: 69%;
+    }
+    
+}
+
+@media (max-width:767px){
+    
+    .NameOfProject{
+        width: 54%;
+    }
 }

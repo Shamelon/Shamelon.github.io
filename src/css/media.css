@@ -1,0 +1,12 @@
+.example_block{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    margin: 50px;
+}
+
+@media (aspect-ratio: 16/9){
+    .example_block{
+        height: 500px;
+    }
+}
