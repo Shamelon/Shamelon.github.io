@@ -728,3 +728,9 @@ footer div{
     }
     
 }
+
+@media (max-width: 575px){
+    
+    h2{font-size: 28px}
+    
+}
